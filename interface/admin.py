@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import MyUser
+from .models import MyUser, ChatRoom, Message
 
 class MyUserAdmin(UserAdmin):
     model = MyUser
@@ -12,3 +12,5 @@ class MyUserAdmin(UserAdmin):
     )
 
 admin.site.register(MyUser, MyUserAdmin)
+admin.site.register(ChatRoom)
+admin.site.register(Message)
